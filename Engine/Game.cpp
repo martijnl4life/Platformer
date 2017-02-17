@@ -25,7 +25,8 @@ Game::Game( MainWindow& wnd )
 	:
 	wnd( wnd ),
 	gfx( wnd ),
-	grd(gfx)
+	grd(gfx),
+	player(Location{2,2},2)
 {
 }
 
@@ -39,9 +40,12 @@ void Game::Go()
 
 void Game::UpdateModel()
 {
+	float dt = ft.Mark();
+	player.Update(grd, wnd.kbd);
 }
 
 void Game::ComposeFrame()
 {
 	grd.DrawGrid();
+	player.Draw(grd);
 }

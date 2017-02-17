@@ -26,6 +26,8 @@
 #include "Grid.h"
 #include "Location.h"
 #include "TileID.h"
+#include "Player.h"
+#include "FrameTimer.h"
 
 class Game
 {
@@ -43,6 +45,14 @@ private:
 private:
 	MainWindow& wnd;
 	Graphics gfx;
+	FrameTimer ft;
 	Grid grd;
+	Player player;
+private:
+	static constexpr float MovePeriodMin = 0.06f;
+	static constexpr float SpeedupFactor = 0.02f;
+	float MovePeriod = 0.4f;
+	float MoveCounter = 0.0f;
+private:
 	bool Initialized = false;
 };

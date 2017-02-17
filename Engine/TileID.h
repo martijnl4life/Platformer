@@ -20,6 +20,17 @@ public:
 };
 
 
+/*
+0 = empty
+1 = wall
+2 = player
+3 = ...
+
+
+
+*/
+
+
 
 
 
