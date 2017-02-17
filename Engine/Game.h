@@ -23,6 +23,9 @@
 #include "Keyboard.h"
 #include "Mouse.h"
 #include "Graphics.h"
+#include "Grid.h"
+#include "Location.h"
+#include "TileID.h"
 
 class Game
 {
@@ -40,7 +43,6 @@ private:
 private:
 	MainWindow& wnd;
 	Graphics gfx;
-	/********************************/
-	/*  User Variables              */
-	/********************************/
+	Grid grd;
+	bool Initialized = false;
 };
